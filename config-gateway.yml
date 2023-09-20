@@ -1,0 +1,28 @@
+server:
+  port: 84
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: PAY-SERVICE
+          uri: http://localhost:80/api/operation
+          predicates:
+            - Path=/api/operation/**
+          filters:
+            - AuthFilter
+
+        - id: INVOICE-SERVICE
+          uri: http://localhost:81/api/invoice
+          predicates:
+            - Path=/api/invoice/**
+
+        - id: TRANSACTION-SERVICE
+          uri: http://localhost:83/api/transaction
+          predicates:
+            - Path=/api/calificaciones/**
+
+        - id: AUTH-SERVICE
+          uri: http://localhost:82/api/auth
+          predicates:
+            - Path=/api/auth/**
