@@ -20,7 +20,7 @@ spring:
         - id: TRANSACTION-SERVICE
           uri: http://localhost:83/api/transaction
           predicates:
-            - Path=/api/calificaciones/**
+            - Path=/api/transaction/**
 
         - id: AUTH-SERVICE
           uri: http://localhost:82/api/auth
