@@ -16,19 +16,19 @@ spring:
           uri: http://localhost:81/api/invoice
           predicates:
             - Path=/api/invoice/**
-            filters:
+          filters:
             - AuthFilter
-
+ 
         - id: TRANSACTION-SERVICE
           uri: http://localhost:83/api/transaction
           predicates:
             - Path=/api/transaction/**,/api/transaction?**
-            filters:
-            - AuthFilter
+          filters:
+          - AuthFilter
 
         - id: AUTH-SERVICE
           uri: http://localhost:82/api/auth
           predicates:
             - Path=/api/auth/**
-            filters:
-            - AuthFilter
+          filters:
+          - AuthFilter
