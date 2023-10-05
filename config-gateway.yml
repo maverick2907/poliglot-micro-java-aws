@@ -9,6 +9,8 @@ spring:
           uri: http://localhost:80/api/operation
           predicates:
             - Path=/api/operation/**
+            filters:
+            - AuthFilter
           
         - id: INVOICE-SERVICE
           uri: http://localhost:81/api/invoice
@@ -24,5 +26,3 @@ spring:
           uri: http://localhost:82/api/auth
           predicates:
             - Path=/api/auth/**
-            filters:
-            - AuthFilter
