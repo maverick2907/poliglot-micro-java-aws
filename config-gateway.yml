@@ -30,5 +30,3 @@ spring:
           uri: http://localhost:82/api/auth
           predicates:
             - Path=/api/auth/**
-          filters:
-          - AuthFilter
