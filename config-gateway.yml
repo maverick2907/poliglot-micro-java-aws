@@ -11,7 +11,7 @@ spring:
             - Path=/api/operation/**
             filters:
             - AuthFilter
-          
+            
         - id: INVOICE-SERVICE
           uri: http://localhost:81/api/invoice
           predicates:
